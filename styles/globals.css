@@ -162,9 +162,10 @@ a:hover {
     max-height: 50px;
 }
 
-@media screen and (max-width: 430px) and (orientation:portrait) {
+@media screen and (orientation:portrait) and (max-width: 430px) {
     .container {
-        max-width: 250px;
+        max-width: inherit;
+        width: 80vw;
         position: relative;
     }
 
@@ -239,7 +240,6 @@ a:hover {
     }
 
 }
-
 
 @media screen and (orientation:portrait) and (max-width:320px) {
     #me {

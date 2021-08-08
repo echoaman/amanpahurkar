@@ -21,14 +21,13 @@ export default function Home() {
                 <title>Aman Pahurkar | Software Engineer</title>
                 <link rel="canonical" href="https://amanpahurkar.vercel.app" />
                 <meta name="description" content="I am Aman Pahurkar and welcome to my personal website! I am currently working at CarWale as an Associate Software Development Engineer. Feel free to reach out to me." />
-                <meta name="keywords" content="personal website, software engineer, computer engineering, B.Tech"/>
+                <meta name="keywords" content="personal website, software engineer, computer engineering" />
             </Head>
             <div id={styles.me}>
                 <Image 
                     src={pic}
                     width={1000}
                     height={1000}
-                    layout="intrinsic"
                     alt="Image of Aman Pahurkar"
                 />
             </div>
@@ -115,7 +114,7 @@ export default function Home() {
                 </svg>
             </header>
 
-            <p id={styles.about}>Hello! I am a Software Engineer with about {approxExp()} months of experience. Currently I am working at <a href="https://carwale.com">CarWale</a> as an Associate Software Development Engineer. Prior to this, I was an intern at CarWale.</p>
+            <p id={styles.about}>Hello! I am a Software Engineer with about <time>{approxExp()} months</time> of experience. Currently I am working at <a href="https://carwale.com">CarWale</a> as an Associate Software Development Engineer. Prior to this, I was an intern at CarWale.</p>
             
             <div id={styles.links}>
                 <a href="https://github.com/echoaman" target="_blank" rel="noopener noreferrer">

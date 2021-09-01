@@ -29,6 +29,7 @@ export default function Home() {
                     width={1000}
                     height={1000}
                     alt="Image of Aman Pahurkar"
+                    priority={true}
                 />
             </div>
 
@@ -114,7 +115,7 @@ export default function Home() {
                 </svg>
             </header>
 
-            <p id={styles.about}>Hello! I am a Software Engineer with about <time>{approxExp()} months</time> of experience. Currently I am working at <a href="https://carwale.com">CarWale</a> as an Associate Software Development Engineer. Prior to this, I was an intern at CarWale.</p>
+            <p id={styles.about}>Hello! I am a Software Engineer with about <time>{approxExp()} months</time> of experience. Currently I am working at <a href="https://carwale.com" target="_blank" rel="noopener noreferrer">CarWale</a> as an Associate Software Development Engineer. Prior to this, I was an intern at CarWale. Reach out to me via LinkedIn or mail.</p>
             
             <div id={styles.links}>
                 <a href="https://github.com/echoaman" target="_blank" rel="noopener noreferrer">

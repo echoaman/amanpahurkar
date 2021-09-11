@@ -1,224 +1,78 @@
+.name {
+    font-size: 64px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.background {
+    z-index: 10;
+}
+
 .container {
+    width: 40vw;
     height: 100vh;
-    width: 100vw;
-    position: relative;
-    max-width: 550px;
-}
-
-
-.nameContainer {
-    height: 100%;
-    width: 100%;
+    background: transparent;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    position: absolute;
-    top: 38%;
-    max-height: 70px;
-}
-
-#me {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-}
-
-#me img {
-    border-radius: 50%;
-}
-
-#name {
-    width: 100%;
-    height: 100%;
-    animation: fill-animation 0.2s linear forwards 0.8s;
-}
-
-#name path:nth-child(1) {
-    stroke-dasharray: 170;
-    stroke-dashoffset: 170;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(2) {
-    stroke-dasharray: 282;
-    stroke-dashoffset: 282;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(3) {
-    stroke-dasharray: 285;
-    stroke-dashoffset: 285;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(4) {
-    stroke-dasharray: 185;
-    stroke-dashoffset: 185;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(5) {
-    stroke-dasharray: 185;
-    stroke-dashoffset: 185;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(6) {
-    stroke-dasharray: 150;
-    stroke-dashoffset: 150;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(7) {
-    stroke-dasharray: 210;
-    stroke-dashoffset: 210;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(8) {
-    stroke-dasharray: 210;
-    stroke-dashoffset: 210;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(9) {
-    stroke-dasharray: 175;
-    stroke-dashoffset: 175;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(10) {
-    stroke-dasharray: 210;
-    stroke-dashoffset: 210;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(11) {
-    stroke-dasharray: 215;
-    stroke-dashoffset: 215;
-    animation: line-animation 0.7s linear forwards;
-}
-#name path:nth-child(12) {
-    stroke-dasharray: 150;
-    stroke-dashoffset: 150;
-    animation: line-animation 0.7s linear forwards;
+    padding-left: 20px;
+    max-width: 600px;
 }
 
 #about {
-    width: 100%;
-    position: absolute;
-    top: 53%;
     font-size: 24px;
-}
-
-#links {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    bottom: 5%;
-    max-height: 50px;
-}
-
-#links svg {
-    width: 100%;
-    height: 100%;
-    max-width: 50px;
-    max-height: 50px;
+    line-height: 1.5;
 }
 
 @media screen and (orientation:portrait) and (max-width: 430px) {
-    .container {
-        max-width: inherit;
-        width: 80vw;
-        position: relative;
+    .background {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../public/pic.jpg);
+        background-size: 48% 27%;
+        background-position: 50% 20%;
+        background-repeat: no-repeat;
     }
 
-    .nameContainer {
+    .container {
+        width: 100vw;
+        height: 45vh;
         position: absolute;
-        max-height: 50px;
+        bottom: 20px;
+        padding-right: 20px;
+    }
+
+    .name {
+        font-size: 48px;
     }
 
     #about {
-        position: absolute;
-        font-size: 16px;
+        font-size: 20px;
     }
-
-    #links {
-        position: absolute;
-        max-height: 35px;
-    }
-
-    #links svg {
-        max-width: 35px;
-        max-height: 35px;
-    }
-
 }
 
 @media screen and (orientation:landscape) and (max-height: 430px) {
     .container {
-        padding: 20px;
-        position: static;
-        height: 100vh;
-        width: 80vw;
-        max-width: initial;
-        display: grid;
-        grid-template-columns: 1.5fr 2fr;
-        grid-template-rows: repeat(3, auto);
-        grid-column-gap: 50px;
-        place-items: center;
-        grid-template-areas: 
-            "me name"
-            "me about"
-            "me links"
-    }
-    
-    #me {
-        grid-area: me;
-        position: static;
-        transform: initial;
+        width: 50vw;
     }
 
-    .nameContainer {
-        grid-area: name;
-        position: static;
+    .name {
+        font-size: clamp(24px, 7vw, 48px);
+        transform: translateY(25px);
     }
-    
+
     #about {
-        grid-area: about;
-        position: static;
         font-size: 16px;
-        line-height: 24px;
-    }
-
-    #links {
-        grid-area: links;
-        position: static;
-        max-height: initial;
-    }
-
-    #links svg {
-        height: 35px;
-        width: 35px;
-    }
-}
-
-@media screen and (orientation:portrait) and (max-width:320px) {
-    #me {
-        width: 150px;
-        height: 150px;
+        transform: translateY(25px);
     }
 }
 
 @media screen and (orientation:landscape) and (max-height:320px) {
     .container {
-        padding: 5px;
-        width: 90vw;
+        width: 55vw;
     }
-}
 
-@keyframes line-animation {
-    to { stroke-dashoffset: 0; }
-}
-
-@keyframes fill-animation {
-    from { fill: transparent; }
-    to { fill: white; }
+    .name {
+        font-size: 32px;
+    }
 }

@@ -13,22 +13,99 @@ body {
 }
 
 body {
-    overflow: hidden;
-    background-color: hsl(0, 0%, 5%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100vw;
-}
-
-p {
-    color: white;
-    line-height: 1.5em;
+    background-color: hsl(0, 0%, 90%);
+    overflow: hidden;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-    font-weight: bold;
+    color: black;
+}
+
+.wrapper-container {
+    width: 100vw;
+    height: calc(100vh - 55px);
+    transform: translateY(55px);
+}
+
+.title {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 85%;
+}
+
+h1 {
+    font-size: clamp(24px, 7vw, 64px);
+    font-family: 'Dancing Script', cursive;
+}
+
+@media screen and (orientation:portrait) and (max-width: 430px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (orientation:landscape) and (max-height: 430px) {
+
+    h1 {
+        font-size: clamp(24px, 7vw, 48px);
+    }
+
+}
+
+
+@keyframes nav-show {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes nav-hide {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    to {
+        transform: translateX-(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes overlay-show {
+    from {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    to {
+        opacity: 0.9;
+        pointer-events: auto;
+    }
+}
+
+@keyframes overlay-hide {
+    from {
+        opacity: 0.9;
+        pointer-events: auto;
+    }
+
+    to {
+        opacity: 0;
+        pointer-events: none;
+    }
 }

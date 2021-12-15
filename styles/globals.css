@@ -1,111 +1,45 @@
+:root {
+	--black: hsl(0, 0%, 0%);
+	--bkg: hsl(0, 0%, 10%);
+	--white: hsl(0, 0%, 100%);
+	--red: hsl(0, 100%, 50%);
+	--orange: hsl(40, 100%, 50%);
+	--green: hsl(120, 100%, 50%);
+	--blue: hsl(200, 100%, 50%);
+	--purple: hsl(280, 100%, 50%);
+}
+
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	width: 100vw;
+	background: var(--bkg);
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
-    background-color: hsl(0, 0%, 90%);
-    overflow: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.wrapper-container {
-    width: 100vw;
-    height: calc(100vh - 55px);
-    transform: translateY(55px);
-}
-
-.title {
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.wrapper {
-    width: 100%;
-    height: 85%;
+h1, p, a, span, button {
+	color: var(--white);
 }
 
 h1 {
-    font-size: clamp(24px, 7vw, 64px);
-    font-family: 'Dancing Script', cursive;
+	font-family: "Dancing Script", cursive;
 }
 
-@media screen and (orientation:portrait) and (max-width: 430px) {
-    h1 {
-        font-size: 48px;
-    }
+button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
-@media screen and (orientation:landscape) and (max-height: 430px) {
-
-    h1 {
-        font-size: clamp(24px, 7vw, 48px);
-    }
-
-}
-
-
-@keyframes nav-show {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes nav-hide {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    
-    to {
-        transform: translateX-(100%);
-        opacity: 0;
-    }
-}
-
-@keyframes overlay-show {
-    from {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    to {
-        opacity: 0.9;
-        pointer-events: auto;
-    }
-}
-
-@keyframes overlay-hide {
-    from {
-        opacity: 0.9;
-        pointer-events: auto;
-    }
-
-    to {
-        opacity: 0;
-        pointer-events: none;
-    }
+a {
+	text-decoration: none;
 }

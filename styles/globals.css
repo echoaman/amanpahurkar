@@ -1,6 +1,7 @@
 :root {
 	--black: hsl(0, 0%, 0%);
 	--bkg: hsl(0, 0%, 10%);
+	--bkg-transparent: hsla(0, 0%, 10%, 0);
 	--white: hsl(0, 0%, 100%);
 	--red: hsl(0, 100%, 50%);
 	--orange: hsl(40, 100%, 50%);
@@ -18,15 +19,19 @@ body {
 	background: var(--bkg);
 }
 
-* {
+*, *::after, *::before {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	font-family: "Poppins", sans-serif;
 }
 
-h1, p, a, span, button {
+h1, h2, p, a, span, button, li {
 	color: var(--white);
+}
+
+li {
+	list-style-position: inside;
 }
 
 h1 {
@@ -41,5 +46,6 @@ button {
 }
 
 a {
+	-webkit-tap-highlight-color: transparent;
 	text-decoration: none;
 }

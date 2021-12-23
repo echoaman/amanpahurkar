@@ -1,0 +1,100 @@
+.main {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: calc(100vh - 64px);
+	overflow-y: scroll;
+}
+
+.heading {
+	text-align: center;
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.experiences {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.exp {
+	width: 100%;
+	background: var(--black);
+	padding: 12px;
+}
+
+.info {
+	display: grid;
+	gap: 8px;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	align-items: center;
+	position: relative;
+	padding-bottom: 12px;
+}
+
+.info::after {
+	content: "";
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 75%;
+	height: 1px;
+	background-color: var(--purple);
+}
+
+.company {
+	text-shadow: 2px 2px 0 var(--purple);
+}
+
+.position {
+	font-weight: 600;
+}
+
+.location, .duration {
+	justify-self: end;
+}
+
+.duration {
+	text-align: right;
+}
+
+.team {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	font-weight: 600;
+}
+
+.exp li:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+.exp li::marker {
+	color: var(--purple);
+}
+
+.tech_stack {
+	margin-top: 8px;
+}
+
+.resume {
+	display: block;
+	background: var(--black);
+	padding: 8px 32px;
+	font-size: 20px;
+	margin: 16px auto;
+	color: var(--purple);
+	border: 1px solid var(--purple);
+	border-radius: 50px;
+	font-weight: bold;
+	display: flex;
+	column-gap: 8px;
+	align-items: center;
+}
+
+.resume_icon {
+	width: 28px;
+	height: 28px;
+}

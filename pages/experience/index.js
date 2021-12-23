@@ -38,7 +38,7 @@ export default function Experience() {
 						</div>
 						<p className={styles.team}>Hacktivate 3.0 Synthesis</p>
 						<ul>
-							<li>A hackathon exclusively for CarWale employees. My team's topic was <strong>TRAI SMS template system</strong></li>
+							<li>A hackathon exclusively for CarWale employees. My team&apos;s topic was <strong>TRAI SMS template system</strong></li>
 							<li>Created a <strong>paginated dashboard</strong> and <strong>developed a new RPC</strong> in Templates microservice which fetches metadata of the existing templates</li>
 						</ul>
 						<p className={styles.team}>CarWale Prices team</p>

@@ -1,0 +1,31 @@
+.container {
+	width: 100vw;
+	max-width: 1200px;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+
+
+
+@media screen and (orientation:landscape) and (max-height: 430px) {
+	.home {
+		bottom: auto;
+		top: 20px;
+		left: 20px;
+		transform: none;
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width: 1200px) {
+	.container {
+		position: relative;
+	}
+
+	.home {
+		position: fixed;
+		bottom: auto;
+		top: 32px;
+		left: calc(32px + (100vw - 1200px) / 2);
+		transform: none;
+	}
+}

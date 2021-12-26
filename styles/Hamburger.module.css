@@ -1,0 +1,26 @@
+.hamburger {
+	width: 120px;
+	font-size: 24px;
+	text-shadow: 0 0 4px var(--white);
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	letter-spacing: -1px;
+}
+
+@media screen and (orientation:landscape) and (max-height: 430px) {
+	.hamburger {
+		/* bottom: auto; */
+		/* top: 20px; */
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width: 1200px) {
+	.hamburger {
+		/* position: fixed; */
+		/* bottom: auto; */
+		/* top: 32px; */
+		/* right: calc(32px + (100vw - 1200px) / 2); */
+	}
+}

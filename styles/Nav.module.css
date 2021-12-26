@@ -1,38 +1,45 @@
-.nav {
-	top: 0;
-	position: absolute;
+.container {
+	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	background: var(--bkg);
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	transition: transform 0.2s linear;
 	z-index: 10;
 }
 
-.nav_hide {
+.hide {
 	transform: translateX(-100%);
 }
 
-.nav_container {
+.nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
 }
 
-.link_button {
+.button {
 	height: 50px;
-	display: flex;
-	align-items: center;
 	background: var(--black);
 	border-radius: 25px;
 	padding: 16px 12px;
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
 }
 
-.link_button:active {
-	transform: translateY(4px);
+.icon {
+	width: 36px;
+	height: 36px;
+}
+
+.text {
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: .5px;
 }
 
 .linkedin {
@@ -67,65 +74,9 @@
 	box-shadow: 0 0 4px 0 var(--purple);
 }
 
-.link_icon {
-	width: 36px;
-	height: 36px;
-}
-
-.link_text {
-	margin-left: 12px;
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: 0.5px;
-}
-
-.nav_controller {
-	width: 100%;
-	height: 64px;
-	position: fixed;
-	bottom: 0;
-	z-index: 20;
-	background-image: linear-gradient(to top, var(--bkg), var(--bkg-transparent));
-}
-
-.home_link {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.home {
-	width: 36px;
-	height: 36px;
-}
-
-.hamburger {
-	width: 120px;
-	font-size: 24px;
-	position: absolute;
-	right: 20px;
-	top: 50%;
-	transform: translateY(-50%);
-	cursor: pointer;
-	text-shadow: 0px 0px 4px var(--white);
-}
-
 /* Phones in landscape */
 @media screen and (orientation:landscape) and (max-height: 430px) {
-	.nav_controller {
-		bottom: auto;
-		top: 0;
-		position: relative;
-		background-image: none;
-	}
-
-	.home_link {
-		left: 20px;
-		transform: translateY(-50%);
-	}
-
-	.nav_container {
+	.nav {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		place-items: center;
@@ -133,37 +84,18 @@
 }
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
-	.nav {
+	.container {
 		height: 100px;
 		width: 800px;
 		left: 50%;
 		transform: translate(-50%, 0);
-		z-index: 20;
 	}
 
-	.nav_container {
-		flex-direction: row;
-	}
-
-	.nav_hide {
+	.hide {
 		transform: translate(-50%, -100%);
 	}
 
-	.nav_controller {
-		top: 0;
-		height: 100px;
-		width: 1200px;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: 10;
-	}
-
-	.hamburger {
-		left: 40px;
-	}
-
-	.home_link {
-		right: 40px;
-		left: auto;
+	.nav {
+		flex-direction: row;
 	}
 }

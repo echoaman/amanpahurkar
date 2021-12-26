@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import '../styles/globals.css';
 import Layout from '../Layouts/Layout';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="google-site-verification" content="Z5ESajq8T3JxcQ45GBL8XR9FTDVRS-DTRYygaZbxBhI" />
 			</Head>
-		  <Component {...pageProps} />
+			<Component {...pageProps} />
 		</Layout>
 	)
 }

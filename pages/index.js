@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
 	function approxExp() {
@@ -23,10 +23,8 @@ export default function Home() {
 			</Head>
 			<main className={`${styles.main}`}>
 				<h1 className={`${styles.heading}`}>Aman Pahurkar</h1>
-				<div className={`${styles.container}`}>
-					<p className={`${styles.about}`}>Hello! I am a software engineer with about {approxExp()} months of experience. Currently I am working at <strong><a href="https://carwale.com" target="_blank" rel="noopener noreferrer">CarWale</a></strong> as an associate software development engineer. Prior to this, I was an intern at CarWale. Reach out to me via LinkedIn or mail.</p>
-				</div>
+				<p className={`${styles.about}`}>Hello! I am a software engineer with about {approxExp()} months of experience. Currently I am working at <strong><a href="https://carwale.com" target="_blank" rel="noopener noreferrer">CarWale</a></strong> as an associate software development engineer. Prior to this, I was an intern at CarWale. Reach out to me via LinkedIn or mail.</p>
 			</main>
 		</>
-	);
+	)
 }

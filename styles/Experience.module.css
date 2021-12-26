@@ -2,12 +2,10 @@
 	padding-top: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
-	height: calc(100vh - 64px);
-	overflow-y: scroll;
+	padding-bottom: 64px;
 }
 
 .heading {
-	text-align: center;
 	font-size: 48px;
 	margin-bottom: 20px;
 }
@@ -97,4 +95,41 @@
 .resume_icon {
 	width: 28px;
 	height: 28px;
+}
+
+@media screen and (orientation:landscape) and (max-height: 430px) {
+	.main {
+		padding-top: 64px;
+		padding-bottom: 0;
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width: 1200px) {
+	.main {
+		padding: 100px 0 0;
+		overflow-y: visible;
+		overflow-x: hidden;
+		height: 100%;
+	}
+
+	.heading {
+		font-size: 64px;
+	}
+
+	.company {
+		font-size: 32px;
+	}
+
+	.location, .position, .duration {
+		font-size: 20px;
+	}
+
+	.content {
+		font-size: 20px;
+	}
+
+	.resume {
+		font-size: 24px;
+		column-gap: 16px;
+	}
 }

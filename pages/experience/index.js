@@ -34,9 +34,9 @@ export default function Experience() {
 								<li>Delivered multiple core New Cars pages: <strong>Home page, Colours page, Images page, Content Listing page, News Details page, User Reviews page, Mileage page, Compare landing and details page, New Cars page, etc.</strong></li>
 								<li>Worked on <strong>desktop, mobile and AMP</strong> views</li>
 								<li>Constantly worked on <strong>improving the core web vitals and SEO</strong> of the migrated pages</li>
-								<li>Developed an <strong>consumer for RabbitMQ to sync user reviews</strong> between old PHP system and current .NET system</li>
+								<li>Developed a <strong>consumer for RabbitMQ to sync user reviews</strong> between old PHP system and current .NET system</li>
 							</ul>
-							<p className={styles.tech_stack}><strong>Tech Stack - .NET, gRPC, MySQL, HTML/SCSS/JS</strong></p>
+							<p className={styles.tech_stack}><strong>Tech Stack - .NET, HTML/SCSS/JS</strong></p>
 						</section>
 					</article>
 					<article className={styles.exp}>

@@ -4,7 +4,7 @@
 	bottom: 0;
 	z-index: 20;
 	height: 64px;
-	background: var(--bkg);
+	background-color: var(--bkg);
 }
 
 .home {

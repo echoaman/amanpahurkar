@@ -2,10 +2,19 @@
 	padding-top: 20px;
 	padding-right: 20px;
 	padding-left: 20px;
+	padding-bottom: 64px;
 }
 
 .heading {
 	font-size: 48px;
+}
+
+.container {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	align-items: center;
 }
 
 .about {
@@ -18,8 +27,21 @@
 }
 
 @media screen and (orientation:landscape) and (max-height: 430px) {
+	.main {
+		padding-bottom: 16px;
+	}
+	
 	.heading {
 		padding-top: 44px;
+	}
+
+	.container {
+		flex-direction: row-reverse;
+		justify-content: space-evenly;
+	}
+
+	.about {
+		width: 40%;
 	}
 }
 
@@ -33,7 +55,14 @@
 		font-size: 64px;
 	}
 
+	.container {
+		margin-top: 60px;
+		flex-direction: row-reverse;
+		justify-content: space-evenly;
+	}
+
 	.about {
+		width: 40%;
 		font-size: 28px;
 		line-height: 42px;
 	}

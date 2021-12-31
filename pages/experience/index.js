@@ -1,12 +1,12 @@
 import Head from "next/head";
 import { useEffect } from "react";
-import updateScollbar from "../../scripts/scrollbar";
+import updateScrollbar from "../../scripts/scrollbar";
 import styles from "../../styles/Experience.module.css";
 
 export default function Experience() {
 
 	useEffect(() => {
-		updateScollbar("var(--purple)", "var(--black)");
+		updateScrollbar("var(--purple)");
 	}, []);
 
 	return (
@@ -15,7 +15,7 @@ export default function Experience() {
 				<title>Experience | Aman Pahurkar</title>
 				<link rel="canonical" href="https://amanpahurkar.vercel.app/experience" />
 				<meta name="description" content="You can find all the companies, the tech stacks and type of work I have done on this page." />
-				<meta name="keywords" content="Experience, tech stack" />
+				<meta name="keywords" content="Experience, tech stack, resume, teams" />
 			</Head>
 			<main className={styles.main}>
 				<h1 className={styles.heading}>Experience</h1>

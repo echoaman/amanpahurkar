@@ -18,7 +18,7 @@
 
 .exp {
 	width: 100%;
-	background: var(--black);
+	background-color: var(--black);
 	padding: 12px;
 }
 
@@ -35,7 +35,7 @@
 .info::after {
 	content: "";
 	position: absolute;
-	bottom: 0%;
+	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 75%;
@@ -44,7 +44,7 @@
 }
 
 .company {
-	text-shadow: 2px 2px 0 var(--purple);
+	text-shadow: 1px 1px 0 var(--purple);
 }
 
 .position {
@@ -79,7 +79,7 @@
 
 .resume {
 	display: block;
-	background: var(--black);
+	background-color: var(--black);
 	padding: 8px 32px;
 	font-size: 20px;
 	margin: 16px auto;
@@ -118,6 +118,7 @@
 
 	.company {
 		font-size: 32px;
+		text-shadow: 1.5px 1.5px 0 var(--purple);
 	}
 
 	.location, .position, .duration {

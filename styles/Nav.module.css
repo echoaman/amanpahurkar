@@ -2,7 +2,7 @@
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background: var(--bkg);
+	background-color: var(--bkg);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -18,12 +18,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 20px;
+	gap: 24px;
 }
 
 .button {
 	height: 50px;
-	background: var(--black);
+	background-color: var(--black);
 	border-radius: 25px;
 	padding: 16px 12px;
 	display: flex;
@@ -74,12 +74,24 @@
 	box-shadow: 0 0 4px 0 var(--purple);
 }
 
+.blog {
+	box-shadow: 0 4px 4px 0 var(--orange);
+}
+
+.blog:active {
+	box-shadow: 0 0 4px 0 var(--orange);
+}
+
 /* Phones in landscape */
 @media screen and (orientation:landscape) and (max-height: 430px) {
 	.nav {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		place-items: center;
+	}
+
+	.nav a:last-child {
+		grid-column: 1 / -1;
 	}
 }
 
@@ -97,5 +109,40 @@
 
 	.nav {
 		flex-direction: row;
+		gap: 40px;
+	}
+
+	.button {
+		padding: 0 8px;
+		position: relative;
+		width: 50px;
+		overflow: hidden;
+		transition: width .3s linear;
+		column-gap: normal;
+	}
+
+	.text {
+		position: absolute;
+		left: 60px;
+	}
+
+	.linkedin:hover {
+		width: 160px;
+	}
+
+	.mail:hover {
+		width: 120px;
+	}
+
+	.github:hover {
+		width: 144px;
+	}
+
+	.experience:hover {
+		width: 188px;
+	}
+
+	.blog:hover {
+		width: 120px;
 	}
 }

@@ -25,7 +25,7 @@ export default function Blog() {
 						<a>
 						<section className={`${styles.blog_post}`}>
 							<h2 className={`${styles.blog_title}`}>One Year As A Software Engineer</h2>
-							<time className={`${styles.publish_date}`} dateTime="2022-01-04">4th January, 2022</time>
+							<p className={`${styles.publish_date}`}>Published on : <time dateTime="2022-01-05">5th January, 2022</time></p>
 							<p className={`${styles.summary}`}>On 4th January, 2022 I completed one year as a software engineer. In this article, I have summarised some of my experiences and learnings.</p>
 						</section>
 						</a>

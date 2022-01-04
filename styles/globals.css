@@ -37,7 +37,7 @@ html::-webkit-scrollbar-thumb {
 	background: var(--thumb);
 }
 
-*, *::after, *::before {
+*:not(code), *:not(code)::after, *:not(code)::before {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;

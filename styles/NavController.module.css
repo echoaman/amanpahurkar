@@ -42,3 +42,9 @@
 		transform: translateY(-50%);
 	}
 }
+
+@media print {
+	.container {
+		display: none;
+	}
+}

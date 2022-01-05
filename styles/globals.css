@@ -1,34 +1,70 @@
+:root {
+	--black: hsl(0, 0%, 0%);
+	--bkg: hsl(0, 0%, 10%);
+	--white: hsl(0, 0%, 100%);
+	--red: hsl(0, 100%, 50%);
+	--orange: hsl(20, 100%, 50%);
+	--green: hsl(120, 100%, 50%);
+	--blue: hsl(200, 100%, 50%);
+	--purple: hsl(280, 100%, 50%);
+}
+
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	width: 100vw;
+	background-color: var(--bkg);
+	overflow-x: hidden;
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+html {
+	--thumb: none;
+	scrollbar-width: thin;
+	scrollbar-color: var(--thumb) var(--black);
 }
 
-body {
-    overflow: hidden;
-    background-color: hsl(0, 0%, 5%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+html::-webkit-scrollbar {
+	width: 0.5vw;
 }
 
-p {
-    color: white;
-    line-height: 1.5em;
+html::-webkit-scrollbar-track {
+	background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+	background: var(--thumb);
+}
+
+*:not(code), *:not(code)::after, *:not(code)::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, p, a, span, button, li, time {
+	color: var(--white);
+}
+
+li {
+	list-style-position: inside;
+}
+
+h1 {
+	font-family: "Dancing Script",  cursive;
+	text-align: center;
+}
+
+button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
 }

@@ -78,7 +78,6 @@
 }
 
 .resume {
-	display: block;
 	background-color: var(--black);
 	padding: 8px 32px;
 	font-size: 20px;

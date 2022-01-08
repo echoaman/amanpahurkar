@@ -83,7 +83,7 @@ export async function getStaticProps({ params }) {
 		const data = await res.json();
 		return {
 			props: { data },
-			revalidate: 1200000
+			revalidate: 600000
 		}
 	} catch (error) {
 		console.error(error);

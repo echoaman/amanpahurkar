@@ -41,7 +41,6 @@
 
 .summary {
 	font-weight: bold;
-	margin-top: 12px;
 }
 
 @media screen and (orientation:landscape) and (max-height: 430px) {

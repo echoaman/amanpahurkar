@@ -5,5 +5,6 @@ jobs:
     name: Test job
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Triggered !!!"
       - run: echo "${{github.event_name}}"
       - run: echo "${{github.event}}"

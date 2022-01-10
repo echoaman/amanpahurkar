@@ -1,0 +1,12 @@
+name: "Deploy website"
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  deploy:
+    name: "Deploy website"
+    if: github.repository_owner == "echoaman" && (github.event.head_commit.message == "__deploy")
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy cmd called"

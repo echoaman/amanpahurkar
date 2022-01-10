@@ -1,0 +1,12 @@
+name: "Cypress e2e"
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  run-cypress-e2e:
+    name: "Run Cypress E2E"
+    if: github.repository_owner == "echoaman" && contains(github.event.head_commit.message, '__e2e')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "E2E cmd called"

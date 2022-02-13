@@ -18,11 +18,11 @@ export default function Blog() {
 				<meta name="description" content="Welcome to my blog! I will jot down my experiences and learnings in different blog posts which you can find here." />
 				<meta name="keywords" content="blog" />
 			</Head>
-			<main className={`${styles.main}`}>
+			<main>
 				<h1 className={`${styles.heading}`}>Blog</h1>
 				<div className={`${styles.container}`}>
 					<Link href="/blog/one-year-as-a-software-engineer">
-						<a>
+						<a className={`${styles.blog_post_wrapper}`}>
 						<section className={`${styles.blog_post}`}>
 							<h2 className={`${styles.blog_title}`}>One Year As A Software Engineer</h2>
 							<p className={`${styles.publish_date}`}>Published on : <time dateTime="2022-01-05">5th January, 2022</time></p>

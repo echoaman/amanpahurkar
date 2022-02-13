@@ -65,13 +65,13 @@ export default function BlogPost({ data }) {
 				<meta name="description" content={data.desc} />
 				<meta name="keywords" content="blog, blog post" />
 			</Head>
-			<main className={`${styles.main}`}>
+			<main>
 				<h1 className={`${styles.heading}`}>{data.heading}</h1>
 				<p className={`${styles.publishedOn}`}>Published on : <time dateTime={data.publishedOn.dateTime}>{data.publishedOn.date}</time></p>
 				<article className={`${styles.post}`}>
 					{ data.postContent.map(content => getContent(content)) }
-					<p><strong>Thank you for reading! 👋</strong></p>
 				</article>
+				<p className={`${styles.thank_you}`}><strong>Thank you for reading! 👋</strong></p>
 			</main>
 		</>
 	)

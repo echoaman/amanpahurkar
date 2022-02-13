@@ -29,7 +29,7 @@ export default function Home() {
 				<meta name="description" content="I am Aman Pahurkar and welcome to my personal website! I work at CarWale as an Associate Software Development Engineer. Feel free to reach out to me!" />
 				<meta name="keywords" content="Aman Pahurkar, software engineer, personal website" />
 			</Head>
-			<main className={`${styles.main}`}>
+			<main>
 				<h1 className={`${styles.heading}`}>Aman Pahurkar</h1>
 				<div className={`${styles.container}`}>
 					<ImageProvider imgName="profilepic.webp" width={300} height={300} alt="Image of Aman Pahurkar" />

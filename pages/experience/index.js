@@ -17,7 +17,7 @@ export default function Experience() {
 				<meta name="description" content="You can find all the companies, the tech stacks and type of work I have done on this page." />
 				<meta name="keywords" content="Experience, tech stack, resume, teams" />
 			</Head>
-			<main className={styles.main}>
+			<main>
 				<h1 className={styles.heading}>Experience</h1>
 				<section className={styles.experiences}>
 					<article className={styles.exp}>
@@ -30,11 +30,9 @@ export default function Experience() {
 						<section className={`${styles.content}`}>
 							<p className={styles.team}>CarTrade New Cars team</p>
 							<ul>
-								<li>Migrated codebase from PHP to <strong>.NET</strong></li>
-								<li>Delivered multiple core New Cars pages: <strong>Home page, Colours page, Images page, Content Listing page, News Details page, User Reviews page, Mileage page, Compare landing and details page, New Cars page, etc.</strong></li>
-								<li>Worked on <strong>desktop, mobile and AMP</strong> views</li>
-								<li>Constantly worked on <strong>improving the core web vitals and SEO</strong> of the migrated pages</li>
-								<li>Developed a <strong>consumer for RabbitMQ to sync user reviews</strong> between old PHP system and current .NET system</li>
+								<li>Overall traffic increased to <strong>0.9 million visits per month (~ 38.5% increase)</strong> post revamp</li>
+								<li><strong>Improved the core web vitals and SEO</strong> of the migrated pages</li>
+								<li><strong>Delivered and revamped multiple core New Cars web pages</strong>: Home page, Colours page, Images page, Content Listing page, News Details page, User Reviews page, Mileage page, Compare landing and details page, New Cars landing page, etc.</li>
 							</ul>
 							<p className={styles.tech_stack}><strong>Tech Stack - .NET, HTML/SCSS/JS</strong></p>
 						</section>
@@ -47,6 +45,12 @@ export default function Experience() {
 							<p className={styles.duration}><time dateTime="2021-01">Jan/2021</time> - <time dateTime="2021-06">Jun/2021</time></p>
 						</section>
 						<section className={`${styles.content}`}>
+							<p className={styles.team}>CarTrade New Cars team</p>
+							<ul>
+								<li>Migrated codebase from PHP to <strong>.NET</strong></li>
+								<li>Worked on <strong>desktop, mobile and AMP</strong> views</li>
+								<li>Developed a <strong>consumer for RabbitMQ to sync user reviews</strong> between old PHP system and current .NET system</li>
+							</ul>
 							<p className={styles.team}>Hacktivate 3.0 Synthesis</p>
 							<ul>
 								<li>A hackathon exclusively for CarWale employees. My team&apos;s topic was <strong>TRAI SMS template system</strong></li>

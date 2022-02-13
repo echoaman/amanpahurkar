@@ -37,11 +37,15 @@ html::-webkit-scrollbar-thumb {
 	background: var(--thumb);
 }
 
-*:not(code), *:not(code)::after, *:not(code)::before {
+*, *::after, *::before {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	font-family: "Poppins", sans-serif;
+}
+
+code {
+	font-family: monospace;
 }
 
 h1, h2, h3, p, a, span, button, li, time {
@@ -67,4 +71,20 @@ button {
 a {
 	-webkit-tap-highlight-color: transparent;
 	text-decoration: none;
+}
+
+main {
+	padding: 20px 20px 64px;
+}
+
+@media screen and (orientation:landscape) and (max-height: 430px) {
+	main {
+		padding: 64px 20px 20px;
+	}
+}
+
+@media screen and (orientation:landscape) and (min-width: 1200px) {
+	main {
+		padding: 100px 0 20px;
+	}
 }

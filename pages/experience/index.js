@@ -30,7 +30,7 @@ export default function Experience() {
 						<section className={`${styles.content}`}>
 							<p className={styles.team}>CarTrade New Cars team</p>
 							<ul>
-								<li>CarTrade's overall <strong>traffic</strong> increased to <strong>0.9 million visits per month (approximately 38.5% increase)</strong> post revamp</li>
+								<li>CarTrade&apos;s overall <strong>traffic</strong> increased to <strong>0.9 million visits per month (approximately 38.5% increase)</strong> post revamp</li>
 								<li><strong>Mentored a new hire</strong> about web development and the practices followed in the company</li>
 								<li>Web pages have <strong>better ranking</strong> as they are <strong>more SEO friendly</strong> and have <strong>improved core web vitals</strong></li>
 								<li><strong>Delivered and revamped multiple core New Cars web pages</strong>: Home page, Colours page, Images page, Content Listing page, News Details page, User Reviews page, Mileage page, Compare landing and details page, New Cars landing page, etc.</li>

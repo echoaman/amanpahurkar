@@ -42,6 +42,37 @@
 	word-break: break-all;
 }
 
+.article_link_wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.article_link {
+	border: 1px solid var(--orange);
+	padding: 8px 16px;
+	border-radius: 4px;
+	max-width: 150px;
+	position: relative;
+	font-weight: bold;
+}
+
+.article_link::after {
+	content: "blog++";
+	font-size: 12px;
+	font-weight: normal;
+	background-color: var(--bkg);
+	padding-left: 4px;
+	padding-right: 4px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+
+.prev_article::after {
+	content: "blog--";
+}
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
 	.heading {

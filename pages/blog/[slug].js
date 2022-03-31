@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import updateScrollbar from "../../scripts/scrollbar";
@@ -70,8 +71,12 @@ export default function BlogPost({ data }) {
 				<p className={`${styles.publishedOn}`}>Published on : <time dateTime={data.publishedOn.dateTime}>{data.publishedOn.date}</time></p>
 				<article className={`${styles.post}`}>
 					{ data.postContent.map(content => getContent(content)) }
+					<p className={`${styles.thank_you}`}><strong>Thank you for reading! 👋</strong></p>
 				</article>
-				<p className={`${styles.thank_you}`}><strong>Thank you for reading! 👋</strong></p>
+				<div className={styles.article_link_wrapper}>
+					<Link href="/"><a className={`${styles.article_link} ${styles.prev_article}`} title="Home">Home</a></Link>
+					<Link href="/"><a className={`${styles.article_link} ${styles.next_article}`} title="Home">Home</a></Link>
+				</div>
 			</main>
 		</>
 	)

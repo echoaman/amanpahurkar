@@ -39,7 +39,6 @@
 	font-size: 16px;
 	line-height: 24px;
 	padding: 4px 8px;
-	word-break: break-all;
 }
 
 .article_link_wrapper {
@@ -49,9 +48,9 @@
 
 .article_link {
 	border: 1px solid var(--orange);
-	padding: 8px 16px;
+	padding: 12px 8px 8px;
 	border-radius: 4px;
-	max-width: 150px;
+	max-width: 45%;
 	position: relative;
 	font-weight: bold;
 }

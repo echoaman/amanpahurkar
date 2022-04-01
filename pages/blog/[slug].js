@@ -34,6 +34,10 @@ export default function BlogPost({ data }) {
 		return <ul key={getKey()}> { items.map(item => <li dangerouslySetInnerHTML={{ __html: item}} key={getKey()} />) } </ul>
 	}
 
+	function getCodeblock(val) {
+		return <code key={getKey()} >{val}</code>
+	}
+
 	function getContent(jsonData) {
 		for (const key in jsonData) {
 			const val = jsonData[key];
@@ -52,6 +56,10 @@ export default function BlogPost({ data }) {
 
 			if(key === "ul") {
 				return getUl(val);
+			}
+
+			if(key === "codeblock") {
+				return getCodeblock(val);
 			}
 
 			return getPara(val);
@@ -73,10 +81,14 @@ export default function BlogPost({ data }) {
 					{ data.postContent.map(content => getContent(content)) }
 					<p className={`${styles.thank_you}`}><strong>Thank you for reading! 👋</strong></p>
 				</article>
-				<div className={styles.article_link_wrapper}>
-					<Link href="/"><a className={`${styles.article_link} ${styles.prev_article}`} title="Home">Home</a></Link>
-					<Link href="/"><a className={`${styles.article_link} ${styles.next_article}`} title="Home">Home</a></Link>
-				</div>
+				{ data.prevBlog || data.nextBlog 
+					? 
+					<div className={styles.article_link_wrapper}>
+						{ data.prevBlog ? <Link href={`/blog/${data.prevBlog.url}`}><a className={`${styles.article_link} ${styles.prev_article}`} title={data.prevBlog.title}>{data.prevBlog.title}</a></Link> : ""}
+						{ data.nextBlog ? <Link href={`/blog/${data.nextBlog.url}`}><a className={`${styles.article_link}`} title={data.nextBlog.title}>{data.nextBlog.title}</a></Link> : "" }
+					</div>
+					: ""
+				}
 			</main>
 		</>
 	)

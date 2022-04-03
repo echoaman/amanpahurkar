@@ -35,7 +35,7 @@ export default function Blog() {
 						<section className={`${styles.blog_post}`}>
 							<h2 className={`${styles.blog_title}`}>How My Team Improved The Performance Of CarTrade&apos;s Migrated Pages</h2>
 							<p className={`${styles.publish_date}`}>Published on : <time dateTime="2022-4-4">4th April, 2022</time></p>
-							<p className={`${styles.summary}`}>By following basic web development strategies, my team was able to significantly improve the performance of the CarTrade&apos;s migrated pages. Here's how we did it.</p>
+							<p className={`${styles.summary}`}>By following basic web development strategies, my team was able to significantly improve the performance of the CarTrade&apos;s migrated pages. Here&apos;s how we did it.</p>
 						</section>
 						</a>
 					</Link>

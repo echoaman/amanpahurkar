@@ -44,7 +44,7 @@ html::-webkit-scrollbar-thumb {
 	font-family: "Poppins", sans-serif;
 }
 
-code {
+code, pre {
 	font-family: monospace;
 }
 

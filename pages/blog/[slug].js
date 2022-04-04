@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import updateScrollbar from "../../scripts/scrollbar";
@@ -33,6 +34,10 @@ export default function BlogPost({ data }) {
 		return <ul key={getKey()}> { items.map(item => <li dangerouslySetInnerHTML={{ __html: item}} key={getKey()} />) } </ul>
 	}
 
+	function getCodeblock(val) {
+		return <code key={getKey()} ><pre key={getKey()}>{val}</pre></code>
+	}
+
 	function getContent(jsonData) {
 		for (const key in jsonData) {
 			const val = jsonData[key];
@@ -53,7 +58,11 @@ export default function BlogPost({ data }) {
 				return getUl(val);
 			}
 
-			return getPara(val);
+			if(key === "codeblock") {
+				return getCodeblock(val);
+			}
+
+			return getPara("-- unknown tag --");
 		}
 	}
 
@@ -70,8 +79,16 @@ export default function BlogPost({ data }) {
 				<p className={`${styles.publishedOn}`}>Published on : <time dateTime={data.publishedOn.dateTime}>{data.publishedOn.date}</time></p>
 				<article className={`${styles.post}`}>
 					{ data.postContent.map(content => getContent(content)) }
+					<strong className={`${styles.thank_you}`}>Thank you for reading! 👋</strong>
 				</article>
-				<p className={`${styles.thank_you}`}><strong>Thank you for reading! 👋</strong></p>
+				{ data.prevBlog || data.nextBlog 
+					? 
+					<div className={styles.article_link_wrapper}>
+						{ data.prevBlog ? <Link href={`/blog/${data.prevBlog.url}`}><a className={`${styles.article_link} ${styles.prev_article}`} title={data.prevBlog.title}>{data.prevBlog.title}</a></Link> : ""}
+						{ data.nextBlog ? <Link href={`/blog/${data.nextBlog.url}`}><a className={`${styles.article_link} ${styles.next_article}`} title={data.nextBlog.title}>{data.nextBlog.title}</a></Link> : "" }
+					</div>
+					: ""
+				}
 			</main>
 		</>
 	)

@@ -40,10 +40,6 @@
 	background-color: var(--purple);
 }
 
-.company {
-	text-shadow: 1px 1px 0 var(--purple);
-}
-
 .position {
 	font-weight: 600;
 }
@@ -100,7 +96,6 @@
 
 	.company {
 		font-size: 32px;
-		text-shadow: 1.5px 1.5px 0 var(--purple);
 	}
 
 	.location, .position, .duration {

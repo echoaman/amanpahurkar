@@ -38,7 +38,7 @@
 	}
 
 	.home {
-		left: 20px;
+		left: 0;
 		transform: translateY(-50%);
 	}
 }

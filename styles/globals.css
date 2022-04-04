@@ -44,11 +44,11 @@ html::-webkit-scrollbar-thumb {
 	font-family: "Poppins", sans-serif;
 }
 
-code {
+code, pre {
 	font-family: monospace;
 }
 
-h1, h2, h3, p, a, span, button, li, time {
+h1, h2, h3, p, a, span, button, li, time, code, strong {
 	color: var(--white);
 }
 

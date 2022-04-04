@@ -48,7 +48,7 @@ code, pre {
 	font-family: monospace;
 }
 
-h1, h2, h3, p, a, span, button, li, time, code {
+h1, h2, h3, p, a, span, button, li, time, code, strong {
 	color: var(--white);
 }
 

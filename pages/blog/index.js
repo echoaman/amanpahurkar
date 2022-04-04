@@ -16,7 +16,7 @@ export default function Blog() {
 				<title>Blog | Aman Pahurkar</title>
 				<link rel="canonical" href="https://amanpahurkar.vercel.app/blog" />
 				<meta name="description" content="Welcome to my blog! I will jot down my experiences and learnings in different blog posts which you can find here." />
-				<meta name="keywords" content="blog" />
+				<meta name="keywords" content="blog, engineering blog" />
 			</Head>
 			<main>
 				<h1 className={`${styles.heading}`}>Blog</h1>

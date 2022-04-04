@@ -62,7 +62,7 @@ export default function BlogPost({ data }) {
 				return getCodeblock(val);
 			}
 
-			return getPara(val);
+			return getPara("-- unknown tag --");
 		}
 	}
 
@@ -79,7 +79,7 @@ export default function BlogPost({ data }) {
 				<p className={`${styles.publishedOn}`}>Published on : <time dateTime={data.publishedOn.dateTime}>{data.publishedOn.date}</time></p>
 				<article className={`${styles.post}`}>
 					{ data.postContent.map(content => getContent(content)) }
-					<p className={`${styles.thank_you}`}><strong>Thank you for reading! 👋</strong></p>
+					<strong className={`${styles.thank_you}`}>Thank you for reading! 👋</strong>
 				</article>
 				{ data.prevBlog || data.nextBlog 
 					? 

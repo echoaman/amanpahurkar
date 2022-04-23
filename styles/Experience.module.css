@@ -1,112 +1,112 @@
 .heading {
-	font-size: 48px;
-	margin-bottom: 20px;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 .experiences {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .exp {
-	width: 100%;
-	background-color: var(--black);
-	padding: 12px;
-	margin-bottom: 20px;
+    width: 100%;
+    background-color: var(--black);
+    padding: 12px;
+    margin-bottom: 20px;
 }
 
 .exp:last-child {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .info {
-	display: grid;
-	gap: 8px;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
-	align-items: center;
-	position: relative;
-	padding-bottom: 12px;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    position: relative;
+    padding-bottom: 12px;
 }
 
 .info::after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 75%;
-	height: 1px;
-	background-color: var(--purple);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 1px;
+    background-color: var(--purple);
 }
 
 .position {
-	font-weight: 600;
+    font-weight: 600;
 }
 
 .location, .duration {
-	justify-self: end;
+    justify-self: end;
 }
 
 .duration {
-	text-align: right;
+    text-align: right;
 }
 
 .team {
-	margin-top: 12px;
-	margin-bottom: 12px;
-	font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .exp li:not(:last-child) {
-	margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .exp li::marker {
-	color: var(--purple);
+    color: var(--purple);
 }
 
 .tech_stack {
-	margin-top: 8px;
+    margin-top: 8px;
 }
 
 .resume {
-	background-color: var(--black);
-	padding: 8px 32px;
-	font-size: 20px;
-	margin: 16px auto 0;
-	color: var(--purple);
-	border: 1px solid var(--purple);
-	border-radius: 50px;
-	font-weight: bold;
-	display: flex;
-	align-items: center;
+    background-color: var(--black);
+    padding: 8px 32px;
+    font-size: 20px;
+    margin: 16px auto 0;
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    border-radius: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .resume_icon {
-	width: 28px;
-	height: 28px;
-	margin-left: 8px;
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
 }
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
-	.heading {
-		font-size: 64px;
-	}
+    .heading {
+        font-size: 64px;
+    }
 
-	.company {
-		font-size: 32px;
-	}
+    .company {
+        font-size: 32px;
+    }
 
-	.location, .position, .duration {
-		font-size: 20px;
-	}
+    .location, .position, .duration {
+        font-size: 20px;
+    }
 
-	.content {
-		font-size: 20px;
-	}
+    .content {
+        font-size: 20px;
+    }
 
-	.resume {
-		font-size: 24px;
-	}
+    .resume {
+        font-size: 24px;
+    }
 }

@@ -1,117 +1,113 @@
 .heading {
-	font-size: 48px;
-	margin-bottom: 40px;
+    font-size: 48px;
+    margin-bottom: 40px;
 }
 
 .post {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .post > * {
-	margin-top: 16px;
+    margin-top: 16px;
 }
 
 .post h2 {
-	margin-top: 40px;
-	font-size: 32px;
+    margin-top: 52px;
+    font-size: 32px;
 }
 
 .post h3 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 .post p, .post li, .thank_you {
-	font-size: 20px;
-	line-height: 30px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 .post ul li {
-	margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .post ul li:last-child {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .post li::marker {
-	color: var(--orange);
+    color: var(--orange);
 }
 
 .post a {
-	text-decoration: underline;
-	text-underline-offset: 1px;
+    text-decoration: underline;
+    text-underline-offset: 1px;
 }
 
-.post code {
-	background-color: var(--black);
-	font-size: 16px;
-	line-height: 24px;
-	padding: 4px 8px;
-}
-
-.post code pre {
-	overflow-x: auto;
-	scrollbar-color: var(--white) var(--black);
+.post p code,
+.post li code {
+    background-color: var(--black);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 4px 8px;
 }
 
 .article_link_wrapper {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .article_link {
-	border: 1px solid var(--orange);
-	padding: 12px 8px 8px;
-	border-radius: 4px;
-	max-width: 45%;
-	position: relative;
-	font-weight: bold;
-	font-size: 16px;
+    border: 1px solid var(--orange);
+    padding: 12px 8px 8px;
+    border-radius: 4px;
+    max-width: 45%;
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .article_link::after {
-	content: "blog++";
-	font-size: 16px;
-	font-weight: normal;
-	background-color: var(--bkg);
-	padding-left: 4px;
-	padding-right: 4px;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	white-space: nowrap;
+    content: "blog++";
+    font-size: 16px;
+    font-weight: normal;
+    background-color: var(--bkg);
+    padding-left: 4px;
+    padding-right: 4px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
 }
 
 .prev_article::after {
-	content: "blog--";
+    content: "blog--";
 }
 
 .next_article {
-	margin-left: auto;
+    margin-left: auto;
 }
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
-	.heading {
-		font-size: 64px;
-	}
+    .heading {
+        font-size: 64px;
+    }
 
-	.publishedOn {
-		font-size: 16px;
-	}
+    .publishedOn {
+        font-size: 16px;
+    }
 
-	.post h2 {
-		font-size: 36px;
-	}
+    .post h2 {
+        font-size: 36px;
+    }
 
-	.post h3 {
-		font-size: 28px;
-	}
+    .post h3 {
+        font-size: 28px;
+    }
 
-	.article_link {
-		padding-top: 16px;
-		font-size: 20px;
-	}
+    .article_link {
+        padding-top: 16px;
+        font-size: 20px;
+    }
 }

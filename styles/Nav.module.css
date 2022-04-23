@@ -1,148 +1,148 @@
 .container {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-color: var(--bkg);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: transform 0.2s linear;
-	z-index: 10;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bkg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s linear;
+    z-index: 10;
 }
 
 .hide {
-	transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .nav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 .button {
-	height: 50px;
-	background-color: var(--black);
-	border-radius: 25px;
-	padding: 16px 12px;
-	display: flex;
-	align-items: center;
-	column-gap: 12px;
+    height: 50px;
+    background-color: var(--black);
+    border-radius: 25px;
+    padding: 16px 12px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
 }
 
 .icon {
-	width: 36px;
-	height: 36px;
+    width: 36px;
+    height: 36px;
 }
 
 .text {
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: .5px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: .5px;
 }
 
 .linkedin {
-	box-shadow: 0 4px 4px 0 var(--blue);
+    box-shadow: 0 4px 4px 0 var(--blue);
 }
 
 .linkedin:active {
-	box-shadow: 0 0 4px 0 var(--blue);
+    box-shadow: 0 0 4px 0 var(--blue);
 }
 
 .mail {
-	box-shadow: 0 4px 4px 0 var(--red);
+    box-shadow: 0 4px 4px 0 var(--red);
 }
 
 .mail:active {
-	box-shadow: 0 0 4px 0 var(--red);
+    box-shadow: 0 0 4px 0 var(--red);
 }
 
 .github {
-	box-shadow: 0 4px 4px 0 var(--white);
+    box-shadow: 0 4px 4px 0 var(--white);
 }
 
 .github:active {
-	box-shadow: 0 0 4px 0 var(--white);
+    box-shadow: 0 0 4px 0 var(--white);
 }
 
 .experience {
-	box-shadow: 0 4px 4px 0 var(--purple);
+    box-shadow: 0 4px 4px 0 var(--purple);
 }
 
 .experience:active {
-	box-shadow: 0 0 4px 0 var(--purple);
+    box-shadow: 0 0 4px 0 var(--purple);
 }
 
 .blog {
-	box-shadow: 0 4px 4px 0 var(--orange);
+    box-shadow: 0 4px 4px 0 var(--orange);
 }
 
 .blog:active {
-	box-shadow: 0 0 4px 0 var(--orange);
+    box-shadow: 0 0 4px 0 var(--orange);
 }
 
 /* Phones in landscape */
 @media screen and (orientation:landscape) and (max-height: 430px) {
-	.nav {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		place-items: center;
-	}
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
 
-	.nav a:last-child {
-		grid-column: 1 / -1;
-	}
+    .nav a:last-child {
+        grid-column: 1 / -1;
+    }
 }
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
-	.container {
-		height: 100px;
-		width: 800px;
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
+    .container {
+        height: 100px;
+        width: 800px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 
-	.hide {
-		transform: translate(-50%, -100%);
-	}
+    .hide {
+        transform: translate(-50%, -100%);
+    }
 
-	.nav {
-		flex-direction: row;
-		gap: 40px;
-	}
+    .nav {
+        flex-direction: row;
+        gap: 40px;
+    }
 
-	.button {
-		padding: 0 8px;
-		position: relative;
-		width: 50px;
-		overflow: hidden;
-		transition: width .3s linear;
-		column-gap: normal;
-	}
+    .button {
+        padding: 0 8px;
+        position: relative;
+        width: 50px;
+        overflow: hidden;
+        transition: width .3s linear;
+        column-gap: normal;
+    }
 
-	.text {
-		position: absolute;
-		left: 60px;
-	}
+    .text {
+        position: absolute;
+        left: 60px;
+    }
 
-	.linkedin:hover {
-		width: 160px;
-	}
+    .linkedin:hover {
+        width: 160px;
+    }
 
-	.mail:hover {
-		width: 120px;
-	}
+    .mail:hover {
+        width: 120px;
+    }
 
-	.github:hover {
-		width: 144px;
-	}
+    .github:hover {
+        width: 144px;
+    }
 
-	.experience:hover {
-		width: 188px;
-	}
+    .experience:hover {
+        width: 188px;
+    }
 
-	.blog:hover {
-		width: 120px;
-	}
+    .blog:hover {
+        width: 120px;
+    }
 }

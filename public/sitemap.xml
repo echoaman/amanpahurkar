@@ -6,7 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://amanpahurkar.vercel.app/</loc>
+  <loc>https://amanpahurkar.vercel.app</loc>
   <priority>1.00</priority>
 </url>
 <url>
@@ -29,6 +29,5 @@
   <loc>https://amanpahurkar.vercel.app/blog/how-my-team-improved-the-performance-of-cartrades-migrated-pages</loc>
   <priority>0.64</priority>
 </url>
-
 
 </urlset>

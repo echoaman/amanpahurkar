@@ -15,7 +15,7 @@ export default function Experience() {
                 <title>Experience | Aman Pahurkar</title>
                 <link rel="canonical" href="https://amanpahurkar.vercel.app/experience" />
                 <meta name="description" content="You can find all the companies, the tech stacks and type of work I have done on this page." />
-                <meta name="keywords" content="aman pahurkar experiece, experience, tech stack, resume, teams" />
+                <meta name="keywords" content="aman pahurkar experiece, aman pahurkar work experience, experience, exp, work experience, work exp, tech stack, resume, teams" />
             </Head>
             <main>
                 <h1 className={styles.heading}>Experience</h1>
@@ -24,8 +24,8 @@ export default function Experience() {
                         <section className={styles.info}>
                             <h2 className={styles.company}>CarWale</h2>
                             <p className={styles.location}>Mumbai, India</p>
-                            <p className={styles.position}>Associate SDE</p>
-                            <p className={styles.duration}><time dateTime="2021-07">Jul/2021</time> - present</p>
+                            <p className={styles.position}>SDE 1</p>
+                            <p className={styles.duration}><time dateTime="2022-04">Apr/2022</time> - Present</p>
                         </section>
                         <section className={styles.content}>
                             <p className={styles.team}>CarTrade New Cars team</p>
@@ -33,7 +33,22 @@ export default function Experience() {
                                 <li>CarTrade&apos;s overall <strong>traffic</strong> increased to <strong>0.93 million sessions per month (approximately 43.1% increase)</strong> post revamp</li>
                                 <li><strong>Mentored a new hire</strong> about web development and the practices followed in the company</li>
                                 <li>Web pages have <strong>better ranking</strong> as they are <strong>more SEO friendly</strong> and have <strong>improved core web vitals</strong></li>
-                                <li><strong>Delivered and revamped multiple core New Cars web pages</strong>: Home page, Colours page, Images page, Content Listing page, News Details page, User Reviews page, Mileage page, Compare landing and details page, New Cars landing page, Dealer landing and listing pages, etc.</li>
+                            </ul>
+                            <p className={styles.tech_stack}><strong>Tech Stack - .NET, HTML/SCSS/JS</strong></p>
+                        </section>
+                    </article>
+                    <article className={styles.exp}>
+                        <section className={styles.info}>
+                            <h2 className={styles.company}>CarWale</h2>
+                            <p className={styles.location}>Mumbai, India</p>
+                            <p className={styles.position}>Associate SDE</p>
+                            <p className={styles.duration}><time dateTime="2021-07">Jul/2021</time> - <time dateTime="2022-03">Mar/2022</time></p>
+                        </section>
+                        <section className={styles.content}>
+                            <p className={styles.team}>CarTrade New Cars team</p>
+                            <ul>
+                                <li><strong>Delivered and revamped multiple core web pages</strong>: Home page, Colours page, Images page, Content Listing page, News Details page, User Reviews page, Mileage page, Compare landing and details page, New Cars landing page, Dealer landing and listing pages, Blog listing and content page, etc.</li>
+                                <li>Worked on <strong>desktop, mobile and AMP</strong> views</li>
                             </ul>
                             <p className={styles.tech_stack}><strong>Tech Stack - .NET, HTML/SCSS/JS</strong></p>
                         </section>
@@ -49,7 +64,6 @@ export default function Experience() {
                             <p className={styles.team}>CarTrade New Cars team</p>
                             <ul>
                                 <li>Migrated codebase from PHP to <strong>.NET</strong></li>
-                                <li>Worked on <strong>desktop, mobile and AMP</strong> views</li>
                                 <li>Developed a <strong>consumer for RabbitMQ to sync user reviews</strong> between old PHP system and current .NET system</li>
                             </ul>
                             <p className={styles.team}>Hacktivate 3.0 Synthesis</p>

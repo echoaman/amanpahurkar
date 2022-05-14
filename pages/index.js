@@ -25,14 +25,14 @@ export default function Home() {
             <Head>
                 <title>Aman Pahurkar</title>
                 <link rel="canonical" href="https://amanpahurkar.vercel.app" />
-                <meta name="description" content="I am Aman Pahurkar and welcome to my personal website! I work at CarWale as an Associate Software Development Engineer. Feel free to reach out to me!" />
+                <meta name="description" content="I am Aman Pahurkar and welcome to my personal website! I work at CarWale as a software development engineer 1. Feel free to reach out to me!" />
                 <meta name="keywords" content="Aman Pahurkar, software engineer, personal website" />
             </Head>
             <main>
                 <h1 className={styles.heading}>Aman Pahurkar</h1>
                 <div className={styles.container}>
                     <ImageProvider imgPath="/profilepic.webp" width={300} height={300} alt="Image of Aman Pahurkar" />
-                    <p className={styles.about}>Hello! I am a software engineer with about {approxExp()} months of experience. Currently I am working at <strong><a title="CarWale" href="https://carwale.com" target="_blank" rel="noopener noreferrer">CarWale</a></strong> as an associate software development engineer. Prior to this, I was an intern at CarWale. Reach out to me via LinkedIn or mail.</p>
+                    <p className={styles.about}>Hello! I am a software engineer with about {approxExp()} months of experience. Currently I am working at <strong><a title="CarWale" href="https://carwale.com" target="_blank" rel="noopener noreferrer">CarWale</a></strong> as a SDE 1. Prior to this, I was an intern at CarWale. Reach out to me via LinkedIn or mail.</p>
                 </div>
             </main>
         </>

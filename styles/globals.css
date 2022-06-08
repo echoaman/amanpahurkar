@@ -48,7 +48,7 @@ code, pre {
     font-family: monospace;
 }
 
-h1, h2, h3, p, a, span, button, li, time, code, strong {
+h1, h2, h3, p, a, span, button, li, time, code, strong, footer {
     color: var(--white);
 }
 
@@ -74,17 +74,31 @@ a {
 }
 
 main {
-    padding: 20px 20px 64px;
+    padding: 20px 20px 0;
+}
+
+footer {
+    margin-top: 16px;
+    padding-bottom: 64px;
+    text-align: center;
 }
 
 @media screen and (orientation:landscape) and (max-height: 430px) {
     main {
-        padding: 64px 20px 20px;
+        padding: 64px 20px 0;
+    }
+    
+    footer {
+        padding-bottom: 20px;
     }
 }
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
     main {
-        padding: 100px 0 20px;
+        padding: 100px 0 0;
+    }
+
+    footer {
+        padding-bottom: 20px;
     }
 }

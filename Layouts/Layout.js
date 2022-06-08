@@ -8,6 +8,7 @@ export const AppContext = createContext();
 export default function Layout({ children }) {
     const [navInvisible, setNavInvisible] = useState(true);
     const [hasClipboard, setHasClipBoard] = useState(true);
+    const currentYear = new Date().getFullYear();
 
     useEffect(() => {
         if(navigator.clipboard) {
@@ -25,6 +26,7 @@ export default function Layout({ children }) {
             <div className={styles.container}>
                 { children }
                 <NavController />
+                <footer>&copy; {currentYear} Aman Pahurkar</footer>
             </div>
         </AppContext.Provider>
     )

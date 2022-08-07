@@ -1,93 +1,93 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../Layouts/Layout";
 import styles from "../styles/Hamburger.module.css";
 
 export default function Hamburger() {
 
+    const hamburgerRef = useRef();
     const { navInvisible, setNavInvisible } = useContext(AppContext);
     
     function toggle() {
-        const hamburger = document.getElementById("hamburger");
-        hamburger.disabled = true;
+        hamburgerRef.current.disabled = true;
         requestAnimationFrame(animate);
 
         function animate() {
             if(navInvisible) {
                 // >< to <Aman />
-                switch (hamburger.textContent) {
+                switch (hamburgerRef.current.textContent) {
                     case "><":
-                        hamburger.textContent = "|";
+                        hamburgerRef.current.textContent = "|";
                         requestAnimationFrame(animate);
                         break;
                     case "|":
-                        hamburger.textContent = "<>";
+                        hamburgerRef.current.textContent = "<>";
                         requestAnimationFrame(animate);
                         break;
                     case "<>":
-                        hamburger.textContent = "<A>";
+                        hamburgerRef.current.textContent = "<A>";
                         requestAnimationFrame(animate);
                         break;
                     case "<A>":
-                        hamburger.textContent = "<Am>";
+                        hamburgerRef.current.textContent = "<Am>";
                         requestAnimationFrame(animate);
                         break;
                     case "<Am>":
-                        hamburger.textContent = "<Ama>";
+                        hamburgerRef.current.textContent = "<Ama>";
                         requestAnimationFrame(animate);
                         break;
                     case "<Ama>":
-                        hamburger.textContent = "<Aman>";
+                        hamburgerRef.current.textContent = "<Aman>";
                         requestAnimationFrame(animate);
                         break;
                     case "<Aman>":
-                        hamburger.textContent = "<Aman >";
+                        hamburgerRef.current.textContent = "<Aman >";
                         requestAnimationFrame(animate);
                         break;
                     case "<Aman >":
-                        hamburger.textContent = "<Aman />";
-                        hamburger.disabled = false;
+                        hamburgerRef.current.textContent = "<Aman />";
+                        hamburgerRef.current.disabled = false;
                         break;
                     default:
-                        hamburger.disabled = false;
+                        hamburgerRef.current.disabled = false;
                         break;
                 }
             } else {
                 // <Aman /> to ><
-                switch (hamburger.textContent) {
+                switch (hamburgerRef.current.textContent) {
                     case "<Aman />":
-                        hamburger.textContent = "<Aman >";
+                        hamburgerRef.current.textContent = "<Aman >";
                         requestAnimationFrame(animate);
                         break;
                     case "<Aman >":
-                        hamburger.textContent = "<Aman>";
+                        hamburgerRef.current.textContent = "<Aman>";
                         requestAnimationFrame(animate);
                         break;
                     case "<Aman>":
-                        hamburger.textContent = "<Ama>";
+                        hamburgerRef.current.textContent = "<Ama>";
                         requestAnimationFrame(animate);
                         break;
                     case "<Ama>":
-                        hamburger.textContent = "<Am>";
+                        hamburgerRef.current.textContent = "<Am>";
                         requestAnimationFrame(animate);
                         break;
                     case "<Am>":
-                        hamburger.textContent = "<A>";
+                        hamburgerRef.current.textContent = "<A>";
                         requestAnimationFrame(animate);
                         break;
                     case "<A>":
-                        hamburger.textContent = "<>";
+                        hamburgerRef.current.textContent = "<>";
                         requestAnimationFrame(animate);
                         break;
                     case "<>":
-                        hamburger.textContent = "|";
+                        hamburgerRef.current.textContent = "|";
                         requestAnimationFrame(animate);
                         break;
                     case "|":
-                        hamburger.textContent = "><";
-                        hamburger.disabled = false;
+                        hamburgerRef.current.textContent = "><";
+                        hamburgerRef.current.disabled = false;
                         break;
                     default:
-                        hamburger.disabled = false;
+                        hamburgerRef.current.disabled = false;
                         break;
                 }
             }
@@ -99,6 +99,6 @@ export default function Hamburger() {
     }, [navInvisible]);
 
     return(
-        <button id="hamburger" className={styles.hamburger} onClick={() => setNavInvisible(!navInvisible)}>&lt;Aman /&gt;</button>
+        <button id="hamburger" ref={hamburgerRef} className={styles.hamburger} onClick={() => setNavInvisible(!navInvisible)}>&lt;Aman /&gt;</button>
     )
 }

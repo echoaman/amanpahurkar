@@ -26,7 +26,6 @@ export default function Home() {
                 <title>Aman Pahurkar</title>
                 <link rel="canonical" href="https://amanpahurkar.vercel.app" />
                 <meta name="description" content="I am Aman Pahurkar and welcome to my personal website! I work at CarWale as a software development engineer 1. Feel free to reach out to me!" />
-                <meta name="keywords" content="Aman Pahurkar, software engineer, personal website" />
             </Head>
             <main>
                 <h1 className={styles.heading}>Aman Pahurkar</h1>

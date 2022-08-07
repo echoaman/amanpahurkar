@@ -15,7 +15,6 @@ export default function Experience() {
                 <title>Experience | Aman Pahurkar</title>
                 <link rel="canonical" href="https://amanpahurkar.vercel.app/experience" />
                 <meta name="description" content="You can find all the companies, the tech stacks and type of work I have done on this page." />
-                <meta name="keywords" content="aman pahurkar experiece, aman pahurkar work experience, experience, exp, work experience, work exp, tech stack, resume, teams" />
             </Head>
             <main>
                 <h1 className={styles.heading}>Experience</h1>
@@ -30,7 +29,8 @@ export default function Experience() {
                         <section className={styles.content}>
                             <p className={styles.team}>CarTrade New Cars team</p>
                             <ul>
-                                <li>CarTrade&apos;s overall <strong>traffic</strong> increased to <strong>0.93 million sessions per month (approximately 43.1% increase)</strong> post revamp</li>
+                                <li><strong>Developer of the Month, June 2022</strong> - Shared this award with a team mate. <strong>Fixed the bad Largest Contentful Paint (LCP) scores of Model AMP and few Make AMP pages</strong> which were reported in April. The source of the problem was unknown. We <strong>researched various techniques</strong> to improve LCP scores. We <strong>documented the implemented solutions and their sources</strong> and <strong>shared them with another team</strong>. June's <strong>average traffic was approximately 70.78% higher</strong> than May's and has been steadily increasing</li>
+                                <li>CarTrade&apos;s overall <strong>traffic</strong> increased to <strong>1.47 million sessions per month (approximate 126.15% increase)</strong> post revamp</li>
                                 <li><strong>Mentored a new hire</strong> about web development and the practices followed in the company</li>
                                 <li>Web pages have <strong>better ranking</strong> as they are <strong>more SEO friendly</strong> and have <strong>improved core web vitals</strong></li>
                             </ul>

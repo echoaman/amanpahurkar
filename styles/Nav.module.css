@@ -84,6 +84,10 @@
 
 /* Phones in landscape */
 @media screen and (orientation:landscape) and (max-height: 430px) {
+    .container {
+        height: calc(100vh - 64px);
+    }
+
     .nav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

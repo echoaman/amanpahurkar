@@ -1,5 +1,6 @@
 .container {
     background-color: var(--black);
+    border-radius: 8px;
 }
 
 .name_wrapper {
@@ -15,7 +16,7 @@
     overflow-wrap: break-word;
 }
 
-.name_wrapper::after {
+.name_wrapper::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -24,6 +25,20 @@
     width: 100%;
     height: 1px;
     background-color: var(--orange);
+}
+
+.name_wrapper::after {
+    content: "Copied!";
+    font-size: 12px;
+    position: absolute;
+    right: 60px;
+    color: var(--orange);
+    opacity: 0;
+    transition: opacity .5s linear;
+}
+
+.name_wrapper.active::after {
+    opacity: 1;
 }
 
 .copy_btn {
@@ -35,17 +50,8 @@
     transition: fill .5s linear;
 }
 
-.copy_btn path::before {
-    content: "Copy code";
-    color: white;
-    font-size: 12px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
 .copy_btn.active {
-    fill: var(--green);
+    fill: var(--orange);
 }
 
 .codeblock {

@@ -16,7 +16,7 @@
     transform: translate(-50%, -50%);
 }
 
-@media screen and (orientation:landscape) and (max-height: 430px) {
+/* @media screen and (orientation:landscape) and (max-height: 430px) {
     .container {
         top: 0;
         bottom: auto;
@@ -26,7 +26,7 @@
         left: 20px;
         transform: translateY(-50%);
     }
-}
+} */
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
     .container {

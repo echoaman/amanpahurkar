@@ -1,10 +1,10 @@
 :root {
     --black: hsl(0, 0%, 0%);
+    --gray: hsl(0, 0%, 20%);
     --bkg: hsl(0, 0%, 10%);
     --white: hsl(0, 0%, 100%);
     --red: hsl(0, 100%, 50%);
     --orange: hsl(20, 100%, 50%);
-    --green: hsl(120, 100%, 50%);
     --blue: hsl(200, 100%, 50%);
     --purple: hsl(280, 100%, 50%);
 }
@@ -83,7 +83,14 @@ footer {
     text-align: center;
 }
 
-@media screen and (orientation:landscape) and (max-height: 430px) {
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+    content-visibility: auto;
+    background-color: var(--gray);
+}
+
+/* @media screen and (orientation:landscape) and (max-height: 430px) {
     main {
         padding: 64px 20px 0;
     }
@@ -91,7 +98,7 @@ footer {
     footer {
         padding-bottom: 20px;
     }
-}
+} */
 
 @media screen and (orientation:landscape) and (min-width: 1200px) {
     main {

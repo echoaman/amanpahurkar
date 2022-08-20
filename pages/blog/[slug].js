@@ -1,12 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useId } from "react";
+import { useContext, useEffect, useId } from "react";
 import Codeblock from "../../Components/Codeblock";
+import { AppContext } from "../../Layouts/Layout";
 import updateScrollbar from "../../scripts/scrollbar";
 import styles from "../../styles/BlogPost.module.css";
 
 export default function BlogPost({ data }) {
+
+    const { domain } = useContext(AppContext);
 
     useEffect(() => {
         updateScrollbar("var(--orange)");
@@ -18,7 +21,7 @@ export default function BlogPost({ data }) {
     let idx = 0;
 
     function getPara(val) {
-        return <p dangerouslySetInnerHTML={{ __html: val}} key={`${id}-${idx++}`} />
+        return <p key={`${id}-${idx++}`} dangerouslySetInnerHTML={{ __html: val}} />
     }
 
     function getH2(val) {
@@ -30,7 +33,7 @@ export default function BlogPost({ data }) {
     }
 
     function getUl(items) {
-        return <ul key={`${id}-${idx++}`}> { items.map(item => <li dangerouslySetInnerHTML={{ __html: item}} key={`${id}-${idx++}`} />) } </ul>
+        return <ul key={`${id}-${idx++}`}> { items.map(item => <li key={`${id}-${idx++}`} dangerouslySetInnerHTML={{ __html: item}} />) } </ul>
     }
 
     function getCodeblock(val) {
@@ -65,12 +68,47 @@ export default function BlogPost({ data }) {
         }
     }
 
+    function getJsonLd(heading = "", description = "", publishDate = "", coverImgPath = "") {
+        return `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://${domain}/blog/${slug}"
+            },
+            "headline": "${heading}",
+            "image": "${process.env.NEXT_PUBLIC_CDN}${coverImgPath}",
+            "description": "${description}",
+            "author": {
+                "@type": "Person",
+                "name": "Aman Pahurkar",
+                "url": "https://${domain}"
+            },
+            "datePublished": "${publishDate}"
+        }`;
+    }
+
     return (
         <>
             <Head>
-                <title>{data.heading} | Aman Pahurkar</title>
-                <link rel="canonical" href={`https://amanpahurkar.vercel.app/blog/${slug}`} />
+                <title>{`${data.heading} | Aman Pahurkar`}</title>
+                <link rel="canonical" href={`https://${domain}/blog/${slug}`} />
                 <meta name="description" content={data.desc} />
+
+                <meta property="og:title" content={`${data.heading} | Aman Pahurkar`} />
+                <meta property="og:url" content={`https://${domain}/blog/${slug}`} />
+                <meta property="og:description" content={data.desc} />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content={`${process.env.NEXT_PUBLIC_CDN}${data.coverImgPath || ""}`} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={`${data.heading} | Aman Pahurkar`} />
+                <meta property="twitter:url" content={`https://${domain}/blog/${slug}`} />
+                <meta name="twitter:description" content={data.desc} />
+                <meta name="twitter:image" content={`${process.env.NEXT_PUBLIC_CDN}${data.coverImgPath || ""}`} />
+                <meta property="twitter:domain" content={domain} />
+
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: getJsonLd(data.heading, data.desc, data.publishedOn.dateTime, data.coverImgPath)}} />
             </Head>
             <main>
                 <h1 className={styles.heading}>{data.heading}</h1>

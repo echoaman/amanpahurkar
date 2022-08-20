@@ -9,16 +9,13 @@ export default function Layout({ children }) {
     const [navInvisible, setNavInvisible] = useState(true);
     const [hasClipboard, setHasClipBoard] = useState(true);
     const currentYear = new Date().getFullYear();
+    const domain = "amanpahurkar.vercel.app";
 
     useEffect(() => {
-        if(navigator.clipboard) {
-            setHasClipBoard(true);
-        } else {
-            setHasClipBoard(false);
-        }
+        setHasClipBoard(navigator.clipboard != null);
     }, []);
 
-    const context = { navInvisible, setNavInvisible, hasClipboard };
+    const context = { navInvisible, setNavInvisible, hasClipboard, domain };
 
     return (
         <AppContext.Provider value={context}>

@@ -99,6 +99,6 @@ export default function Hamburger() {
     }, [navInvisible]);
 
     return(
-        <button id="hamburger" ref={hamburgerRef} className={styles.hamburger} onClick={() => setNavInvisible(!navInvisible)}>&lt;Aman /&gt;</button>
+        <button ref={hamburgerRef} className={styles.hamburger} onClick={() => setNavInvisible(!navInvisible)}>&lt;Aman /&gt;</button>
     )
 }

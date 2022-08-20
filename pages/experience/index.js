@@ -1,9 +1,12 @@
 import Head from "next/head";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { AppContext } from "../../Layouts/Layout";
 import updateScrollbar from "../../scripts/scrollbar";
 import styles from "../../styles/Experience.module.css";
 
 export default function Experience() {
+
+    const { domain } = useContext(AppContext);
 
     useEffect(() => {
         updateScrollbar("var(--purple)");
@@ -13,7 +16,7 @@ export default function Experience() {
         <>
             <Head>
                 <title>Experience | Aman Pahurkar</title>
-                <link rel="canonical" href="https://amanpahurkar.vercel.app/experience" />
+                <link rel="canonical" href={`https://${domain}/experience`} />
                 <meta name="description" content="You can find all the companies, the tech stacks and type of work I have done on this page." />
             </Head>
             <main>
@@ -21,7 +24,7 @@ export default function Experience() {
                 <section className={styles.experiences}>
                     <article className={styles.exp}>
                         <section className={styles.info}>
-                            <h2 className={styles.company}>CarWale</h2>
+                            <h2 className={styles.company}>CarTrade Tech</h2>
                             <p className={styles.location}>Mumbai, India</p>
                             <p className={styles.position}>SDE 1</p>
                             <p className={styles.duration}><time dateTime="2022-04">Apr/2022</time> - Present</p>
@@ -39,7 +42,7 @@ export default function Experience() {
                     </article>
                     <article className={styles.exp}>
                         <section className={styles.info}>
-                            <h2 className={styles.company}>CarWale</h2>
+                            <h2 className={styles.company}>CarTrade Tech</h2>
                             <p className={styles.location}>Mumbai, India</p>
                             <p className={styles.position}>Associate SDE</p>
                             <p className={styles.duration}><time dateTime="2021-07">Jul/2021</time> - <time dateTime="2022-03">Mar/2022</time></p>
@@ -55,7 +58,7 @@ export default function Experience() {
                     </article>
                     <article className={styles.exp}>
                         <section className={styles.info}>
-                            <h2 className={styles.company}>CarWale</h2>
+                            <h2 className={styles.company}>CarTrade Tech</h2>
                             <p className={styles.location}>Mumbai, India</p>
                             <p className={styles.position}>Intern</p>
                             <p className={styles.duration}><time dateTime="2021-01">Jan/2021</time> - <time dateTime="2021-06">Jun/2021</time></p>
@@ -80,7 +83,7 @@ export default function Experience() {
                         </section>
                     </article>
                 </section>
-                <a href="/AmanPahurkar.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/AmanPahurkar.pdf" target="_blank" rel="noopener noreferrer" title="Resume">
                     <button className={styles.resume}>Resume <svg className={styles.resume_icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--purple)"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg></button>
                 </a>
             </main>

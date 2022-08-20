@@ -40,7 +40,7 @@
 
 .post a {
     text-decoration: underline;
-    text-underline-offset: 1px;
+    text-underline-offset: 2px;
 }
 
 .post p code,

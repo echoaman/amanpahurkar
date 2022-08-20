@@ -73,7 +73,9 @@ export default function Home() {
             <main>
                 <h1 className={styles.heading}>Aman Pahurkar</h1>
                 <div className={styles.container}>
-                    <img src={`${process.env.NEXT_PUBLIC_CDN}/1x1-profile.webp?tr=w-360,ar-1-1,q-75`} width={360} height={360} decoding="async" alt="Image of Aman Pahurkar" />
+                    <picture>
+                        <img src={`${process.env.NEXT_PUBLIC_CDN}/1x1-profile.webp?tr=w-360,ar-1-1,q-75`} width={360} height={360} decoding="async" alt="Image of Aman Pahurkar" />
+                    </picture>
                     <p className={styles.about}>Hello! I am a software engineer with about {approxExp()} months of experience. Currently I am working at <strong><a title="CarWale (CarTrade Tech)" href="https://carwale.com" target="_blank" rel="noopener noreferrer">CarWale (CarTrade Tech)</a></strong> as a SDE 1. Prior to this, I was an intern at CarWale. Feel free to reach out to me!</p>
                 </div>
             </main>

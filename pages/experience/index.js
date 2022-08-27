@@ -33,7 +33,7 @@ export default function Experience() {
                             <p className={styles.team}>CarTrade New Cars team</p>
                             <ul>
                                 <li><strong>Developer of the Month, June 2022</strong> - Shared this award with a team mate. <strong>Fixed the bad Largest Contentful Paint (LCP) scores</strong> of Model AMP and few Make AMP pages which were reported in April. The source of the problem was unknown. We <strong>researched various techniques</strong> to improve LCP scores. We <strong>documented the implemented solutions and their sources</strong> and <strong>shared them with another team</strong>. June&apos;s <strong>average traffic was approximately 70.78% higher</strong> than May&apos;s and has been steadily increasing</li>
-                                <li>CarTrade&apos;s overall <strong>traffic</strong> increased to <strong>1.47 million sessions per month (approximate 126.15% increase)</strong> post revamp</li>
+                                <li>CarTrade&apos;s organic <strong>traffic</strong> has increased to <strong>1.47 million sessions per month (approximate 126.15% increase)</strong> post revamp</li>
                                 <li><strong>Mentored a new hire</strong> about web development and the practices followed in the company</li>
                                 <li>Web pages have <strong>better ranking</strong> as they are <strong>more SEO friendly</strong> and have <strong>improved core web vitals</strong></li>
                             </ul>
